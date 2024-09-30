@@ -1,5 +1,5 @@
 {% set name = "std-uritemplate" %}
-{% set version = "1.0.6" %}
+{% set version = "2.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/std_uritemplate-{{ version }}.tar.gz
-  sha256: 9bed621204a9dbb47f89ea958c97c463d15f28bccbc801aab8c9b0d75719ec62
+  sha256: be88c8a4a89fee6768237f594c537d9347d96d7e68b8ad12200a3f11a0f6398f
 
 build:
   noarch: python
