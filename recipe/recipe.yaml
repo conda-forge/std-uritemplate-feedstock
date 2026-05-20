@@ -1,0 +1,45 @@
+schema_version: 1
+
+context:
+  name: std-uritemplate
+  version: "2.0.8"
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/std_uritemplate-${{ version }}.tar.gz
+  sha256: 138ceff2c5bfef18a650372a5e8c82fe7f780c87235513de6c342fb5f7e18347
+
+build:
+  number: 1
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - poetry-core
+    - pip
+  run:
+    - python >=${{ python_min }}
+
+tests:
+  - python:
+      imports:
+        - stduritemplate
+      pip_check: true
+      python_version: ${{ python_min }}
+
+about:
+  summary: std-uritemplate implementation for Python
+  license: Apache-2.0
+  license_file: LICENSE
+  homepage: https://github.com/std-uritemplate/std-uritemplate
+  repository: https://github.com/std-uritemplate/std-uritemplate
+  documentation: https://github.com/std-uritemplate/std-uritemplate/blob/main/Readme.md
+
+extra:
+  recipe-maintainers:
+    - xylar
