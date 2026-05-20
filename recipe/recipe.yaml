@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: std-uritemplate
-  version: "2.0.8"
+  version: "2.0.10"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/std_uritemplate-${{ version }}.tar.gz
-  sha256: 138ceff2c5bfef18a650372a5e8c82fe7f780c87235513de6c342fb5f7e18347
+  sha256: 35048a322217aed9766fdffe5a69f0632f7319577a4a265268761cd4ffa3205e
 
 build:
   number: 1
